@@ -21,7 +21,5 @@ const getValue = () => {
     });
 　}   
 }
-
-
 getValue();
 
