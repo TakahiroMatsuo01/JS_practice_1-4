@@ -5,20 +5,23 @@ const getValue = () => {
     let request = prompt('「確認、追加、削除、終了」のいずれかを入力してください。');
     let addtask = prompt('タスクを入力してください。');
     let addgenre = prompt('ジャンルを入力してください。');
-            console.log(title);
-    for(let i = 0; i < addtasks_Array.length; i++) {
-        console.log(`${i}:[内容]${addtasks_Array[i]}、[ジャンル]${addgenre_Array[i]}`);
-　　　}
-    
+             console.log(title);
+    addtasks_Array.forEach((value,index) => {
+                console.log(`${index}`,`[内容]:${value}`,`[ジャンル]${addgenre_Array[index]}`);
+
+    });   
     if(addtask && addgenre){
             console.log(title);
             addtasks_Array.push(addtask);
             addgenre_Array.push(addgenre)
             alert('新しいタスクを追加しました。');
-    for(let i = 0; i < addtasks_Array.length; i++) {
-            console.log(`${i}:[内容]${addtasks_Array[i]}、[ジャンル]${addgenre_Array[i]}`);
-　　}
+            addtasks_Array.forEach((value,index) => {
+                console.log(`${index}`,`[内容]:${value}`,`[ジャンル]${addgenre_Array[index]}`);
+
+    });
 　}   
 }
+
+
 getValue();
 
